@@ -16,7 +16,7 @@ Now as we open image in new tab we can see that images are located in
 /images folder. So we can assume that whole path to image is:
 
 ```bash
-/war/www/image/2.jpg
+/var/www/image/2.jpg
 ```
 
 We need to trawers up 3 times to get to root folder by using
