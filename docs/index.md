@@ -4,8 +4,8 @@
 
 TO DO
 
-## Walkthroughs:
+## Walkthroughs
 
-- Port Swigger Academ
-  
-  - [File path traversal, simple case](walkthroughs/port_swigger/learning_paths/server_side_vulnerabilities/file_path_traversal_simple_case)
+###### Port Swigger Academy:
+
+- [File path traversal, simple case](walkthroughs/port_swigger/learning_paths/server_side_vulnerabilities/file_path_traversal_simple_case)
