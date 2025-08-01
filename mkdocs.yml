@@ -12,4 +12,5 @@ nav:
   - Walkthroughs:
     - Port Swigger:
       - Learning Paths:
-        - Server-side vulnerabilities: walkthroughs/port-swigger/learning-paths/server-side-vulnerabilities.md
+        - Server-side vulnerabilities:
+          - File path traversal, simple case: walkthroughs/port-swigger/learning_paths/server_side_vulnerabilities/file_path_traversal_simple_case/file_path_traversal_simple_case.md
