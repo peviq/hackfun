@@ -10,7 +10,7 @@ Knowing typical structure of a html server we can deduct that page is sitting in
 /var/www
 ```
 
-![burp filter images](../../../../../assets/port_swigger/file_path_traversal_simple_case/burp_filter_images.png)
+![burp filter images](../../../assets/port_swigger/file_path_traversal_simple_case/burp_filter_images.png)
 
 Now as we open image in new tab we can see that images are located in /images folder. So we can assume that whole path to image is:
 
@@ -32,4 +32,4 @@ GET /image?filename=../../../etc/passwd HTTP/2
 
 Doing this in Repeater we solved the lab!
 
-![solved](../../../../../assets/port_swigger/file_path_traversal_simple_case/solved.png)
+![solved](../../../assets/port_swigger/file_path_traversal_simple_case/solved.png)
