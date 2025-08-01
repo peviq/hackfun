@@ -12,7 +12,7 @@ Knowing typical structure of a html server we can deduct that page is sitting in
 
 ![burp filter images](../../../../../assets/port_swigger/file_path_traversal_simple_case/burp_filter_images.png)
 
-Now as we open image in new tab we can see that images are located in /images śfolder. So we can assume that whole path to image is:
+Now as we open image in new tab we can see that images are located in /images folder. So we can assume that whole path to image is:
 
 ```bash
 /war/www/image/2.jpg
