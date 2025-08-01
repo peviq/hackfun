@@ -1,0 +1,19 @@
+body {
+  background-color: #0d0d0d;
+  color: #39ff14;
+  font-family: "Fira Code", monospace;
+}
+
+a {
+  color: #00ffcc;
+}
+
+nav, .md-header {
+  background-color: #111111;
+}
+
+code, pre {
+  background-color: #111;
+  color: #9fef00;
+  font-family: "Fira Code", monospace;
+}

@@ -1,0 +1,15 @@
+site_name: hackfun
+theme:
+  name: material
+  palette:
+    scheme: slate  # dark theme
+    primary: black
+    accent: lime   # hacker green
+  font:
+    text: Roboto Mono
+    code: Fira Code
+nav:
+  - Walkthroughs:
+    - Port Swigger:
+      - Learning Paths:
+        - Server-side vulnerabilities: walkthroughs/port-swigger/learning-paths/server-side-vulnerabilities.md
