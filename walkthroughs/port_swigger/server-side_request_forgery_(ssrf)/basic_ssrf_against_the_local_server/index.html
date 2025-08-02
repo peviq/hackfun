@@ -10,15 +10,13 @@
       
       
       
-        <link rel="next" href="../../access_control_vulnerabilities/unprotected_admin_functionality/">
-      
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>File path traversal, simple case - hackfun</title>
+        <title>Basic ssrf against the local server - hackfun</title>
       
     
     
@@ -99,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              File path traversal, simple case
+              Basic ssrf against the local server
             
           </span>
         </div>
@@ -192,20 +190,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -221,7 +217,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Walkthroughs
@@ -232,20 +228,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -261,7 +255,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_1">
             <span class="md-nav__icon md-icon"></span>
             Port Swigger
@@ -272,20 +266,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_1" >
         
           
           <label class="md-nav__link" for="__nav_1_1_1" id="__nav_1_1_1_label" tabindex="0">
@@ -301,7 +293,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_1_1">
             <span class="md-nav__icon md-icon"></span>
             Path traversal
@@ -312,17 +304,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../path_traversal/file_path_traversal_simple_case/" class="md-nav__link">
         
   
   
@@ -333,7 +318,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -600,20 +584,9 @@
 
 
 
-  <h1>File path traversal, simple case</h1>
+  <h1>Basic ssrf against the local server</h1>
 
-<p>We need to reed the contents of <code>/etc/passwd</code></p>
-<p>Knowing typical structure of a html server we can deduct that page is sitting in <code>/var/www</code></p>
-<p>In order to see request containig images we need to add them to filter in Burp</p>
-<p><img alt="burp filter images" src="../../../../assets/port_swigger/file_path_traversal_simple_case/burp_filter_images.png" /></p>
-<p>Now as we open image in new tab we can see that images are located in 
-<code>/images</code> folder. So we can assume that whole path to image is <code>/var/www/image/2.jpg</code></p>
-<p>We need to trawers up 3 times to get to root folder by using <code>../</code></p>
-<p>To do that we must modify query in request so it looks like this:</p>
-<pre><code class="language-bash">GET /image?filename=../../../etc/passwd HTTP/2
-</code></pre>
-<p>By doing this in Repeater we solved the lab!</p>
-<p><img alt="solved" src="../../../../assets/port_swigger/file_path_traversal_simple_case/solved.png" /></p>
+
 
 
 
